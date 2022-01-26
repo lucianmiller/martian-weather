@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'program-name',
+      title: 'martian-weather',
       template: './src/index.html',
       inject: 'body'
     }),
