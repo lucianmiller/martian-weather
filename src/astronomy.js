@@ -1,5 +1,5 @@
 export default class Astronomy {
-  static getAstronomy () {
+  static getAstronomy() {
     return new Promise(function(resolve, reject){
       let request = new XMLHttpRequest();
       const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&thumbs=True`
