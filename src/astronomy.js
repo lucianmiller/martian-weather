@@ -10,7 +10,7 @@ export default class Astronomy {
           reject(request.response);
         }
       }
-      request.open("GET", url, true)
+      request.open("GET", url, true);
       request.send();
     });
   }
