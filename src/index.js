@@ -19,7 +19,10 @@ $(document).ready(function() {
   let promiseAstro = Astronomy.getAstronomy();
   promiseAstro.then(function(response) {
     let body = JSON.parse(response);
-    console.log("Astronomy Working!");
+    
+    $('#photo').html('<img src='+body.url+'>');
+    console.log("Astronomy Working!", body.url);
+    console.table(body);
   }, function(error){
     $('#error').text(`There was an error processing your request: ${error}`);
   });
