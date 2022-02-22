@@ -19,8 +19,9 @@ $(document).ready(function() {
   let promiseAstro = Astronomy.getAstronomy();
   promiseAstro.then(function(response) {
     let body = JSON.parse(response);
-    
-    $('#photo').html('<img src='+body.url+'>');
+    $('#astronomy').click(function(){
+      $('#photo').html('<img src='+body.url+'>');
+    });
     console.log("Astronomy Working!", body.url);
     console.table(body);
   }, function(error){
