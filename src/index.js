@@ -11,7 +11,9 @@ $(document).ready(function() {
   let promiseRover = Rover.getRover();
   promiseRover.then(function(response) {
     let body = JSON.parse(response);
-    console.log("Rover Working!");
+    console.log("Rover Working!", body);
+    console.table(body);
+    $('#photo').html('<img src='+body.photos[0].img_src+'>');
   }, function(error) {
     $('#error').text(`There was an error processing your request: ${error}`);
   });
@@ -22,8 +24,8 @@ $(document).ready(function() {
     $('#astronomy').click(function(){
       $('#photo').html('<img src='+body.url+'>');
     });
-    console.log("Astronomy Working!", body.url);
-    console.table(body);
+    //console.log("Astronomy Working!", body.url);
+    //console.table(body);
   }, function(error){
     $('#error').text(`There was an error processing your request: ${error}`);
   });
