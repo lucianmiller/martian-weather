@@ -13,7 +13,9 @@ $(document).ready(function() {
     let body = JSON.parse(response);
     console.log("Rover Working!", body);
     console.table(body);
-    $('#photo').html('<img src='+body.photos[0].img_src+'>');
+    $('#rover').click(function(){
+      $('#photo').html('<img src='+body.photos[0].img_src+'>');
+    });
   }, function(error) {
     $('#error').text(`There was an error processing your request: ${error}`);
   });
