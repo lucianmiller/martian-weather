@@ -27,12 +27,4 @@ $(document).ready(function() {
   }, function(error){
     $('#error').text(`There was an error processing your request: ${error}`);
   });
-  //Weather promise
-  let promiseWeather = Weather.getWeather();
-  promiseWeather.then(function(response) {
-    let body = JSON.parse(response);
-    console.log("Weather working!");
-  }, function(error){
-    $('#error').text(`There was an error processing your request: ${error}`);
-  });
 });
