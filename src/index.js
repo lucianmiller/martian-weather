@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Rover from './rover';
 import Astronomy from './astronomy';
-import Weather from './weather';
 
 $(document).ready(function() {
   //Rover promise
